@@ -13,6 +13,7 @@
 		5499774A24C9B40800931E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5499774924C9B40800931E18 /* Assets.xcassets */; };
 		5499774D24C9B40800931E18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5499774C24C9B40800931E18 /* Preview Assets.xcassets */; };
 		5499775024C9B40800931E18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5499774E24C9B40800931E18 /* LaunchScreen.storyboard */; };
+		5499775A24C9B7D700931E18 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5499775924C9B7D700931E18 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5499774C24C9B40800931E18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5499774F24C9B40800931E18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5499775124C9B40800931E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5499775924C9B7D700931E18 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				5499774E24C9B40800931E18 /* LaunchScreen.storyboard */,
 				5499775124C9B40800931E18 /* Info.plist */,
 				5499774B24C9B40800931E18 /* Preview Content */,
+				5499775924C9B7D700931E18 /* MapView.swift */,
 			);
 			path = "Distance Calculator";
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5499774424C9B40600931E18 /* AppDelegate.swift in Sources */,
+				5499775A24C9B7D700931E18 /* MapView.swift in Sources */,
 				5499774624C9B40600931E18 /* SceneDelegate.swift in Sources */,
 				5499774824C9B40600931E18 /* ContentView.swift in Sources */,
 			);
