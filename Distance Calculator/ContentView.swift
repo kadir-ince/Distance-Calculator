@@ -13,6 +13,8 @@ struct ContentView: View {
     @State private var centerCoordinate = CLLocationCoordinate2D()
     @State private var locations = [MKPointAnnotation]()
 
+    @State private var showSettings = false
+
     @ObservedObject var dm = DistanceManager()
 
     var body: some View {
@@ -30,23 +32,23 @@ struct ContentView: View {
                 let newLocation = MKPointAnnotation()
                 newLocation.coordinate = self.centerCoordinate
                 self.locations.append(newLocation)
-                
+
                 if self.locations.count == 2 {
                     let locationA = CLLocation(latitude: self.locations.first!.coordinate.latitude, longitude: self.locations.first!.coordinate.longitude)
-                    
+
                     let locationB = CLLocation(latitude: self.locations.last!.coordinate.latitude, longitude: self.locations.last!.coordinate.longitude)
-                    
+
                     self.dm.distance([locationA, locationB])
-                    
-                }else if self.locations.count > 2 {
+
+                } else if self.locations.count > 2 {
                     self.dm.distance = 0
                     self.locations.removeAll()
                 }
-                
+
             }) {
                 if self.locations.count != 2 {
                     Image(systemName: "plus")
-                }else{
+                } else {
                     Image(systemName: "trash")
                 }
             }
@@ -62,23 +64,23 @@ struct ContentView: View {
                     .font(.title).bold()
                 Circle()
                     .frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.37)
-                
             }
             HStack {
                 Spacer()
                 Spacer()
                 if dm.distance != 0 {
-                    Text("\(Int(dm.distance ?? 0 )) km ")
+                    Text("\(Int(dm.distance ?? 0)) km ")
                         .font(.title)
                 }
                 Spacer()
+
                 Button(action: {
-                    //
-                }) {
+                    self.showSettings.toggle()
+                }, label: {
                     Image(systemName: "gear")
                         .font(.largeTitle)
                         .padding()
-                }
+                }).sheet(isPresented: $showSettings, content: { SettingsView() })
             }
         }
     }
