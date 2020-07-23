@@ -61,12 +61,11 @@
 				5499774324C9B40600931E18 /* AppDelegate.swift */,
 				5499774524C9B40600931E18 /* SceneDelegate.swift */,
 				5499774724C9B40600931E18 /* ContentView.swift */,
-				5499775B24C9BE8000931E18 /* New Group */,
+				5499775924C9B7D700931E18 /* MapView.swift */,
 				5499774924C9B40800931E18 /* Assets.xcassets */,
 				5499774E24C9B40800931E18 /* LaunchScreen.storyboard */,
 				5499775124C9B40800931E18 /* Info.plist */,
 				5499774B24C9B40800931E18 /* Preview Content */,
-				5499775924C9B7D700931E18 /* MapView.swift */,
 			);
 			path = "Distance Calculator";
 			sourceTree = "<group>";
@@ -77,13 +76,6 @@
 				5499774C24C9B40800931E18 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		5499775B24C9BE8000931E18 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

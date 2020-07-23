@@ -11,11 +11,12 @@ import MapKit
 import SwiftUI
 
 struct MapView: UIViewRepresentable {
-    @Binding var centerCoordinates: CLLocationCoordinate2D
+    @Binding var centerCoordinate: CLLocationCoordinate2D
     var mapAnnotations: [MKPointAnnotation]
 
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
+        mapView.delegate = context.coordinator
         mapView.setCenter(CLLocationCoordinate2DMake(37.3344728, -122.008715), animated: true)
         return mapView
     }
@@ -38,7 +39,7 @@ struct MapView: UIViewRepresentable {
         }
 
         func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
-            mapViewParent.centerCoordinates = mapView.centerCoordinate
+            mapViewParent.centerCoordinate = mapView.centerCoordinate
         }
     }
 }
@@ -54,6 +55,6 @@ extension MKPointAnnotation {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(centerCoordinates: .constant(MKPointAnnotation.applePark.coordinate), mapAnnotations: [MKPointAnnotation.applePark])
+        MapView(centerCoordinate: .constant(MKPointAnnotation.applePark.coordinate), mapAnnotations: [MKPointAnnotation.applePark])
     }
 }
