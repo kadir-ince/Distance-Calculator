@@ -6,13 +6,17 @@
 //  Copyright © 2020 Kadir. All rights reserved.
 //
 
+import MapKit
 import SwiftUI
 
 struct ContentView: View {
+    @State private var centerCoordiante = CLLocationCoordinate2D()
+    @State private var locations = [MKPointAnnotation]()
+
     var body: some View {
         VStack {
             ZStack {
-                Rectangle()
+                MapView(centerCoordinates: $centerCoordiante, mapAnnotations: locations)
                     .edgesIgnoringSafeArea(.top)
                     .foregroundColor(.gray)
                 Circle()
