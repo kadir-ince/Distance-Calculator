@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		548902AD24C9C71300DF6DCE /* DistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548902AC24C9C71300DF6DCE /* DistanceManager.swift */; };
 		548902AF24C9CD6500DF6DCE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548902AE24C9CD6500DF6DCE /* SettingsView.swift */; };
+		548902B324C9EF7D00DF6DCE /* SettingDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548902B224C9EF7D00DF6DCE /* SettingDefaults.swift */; };
+		548902B524C9F05200DF6DCE /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548902B424C9F05200DF6DCE /* SettingsManager.swift */; };
 		5499774424C9B40600931E18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5499774324C9B40600931E18 /* AppDelegate.swift */; };
 		5499774624C9B40600931E18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5499774524C9B40600931E18 /* SceneDelegate.swift */; };
 		5499774824C9B40600931E18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5499774724C9B40600931E18 /* ContentView.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		548902AC24C9C71300DF6DCE /* DistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceManager.swift; sourceTree = "<group>"; };
 		548902AE24C9CD6500DF6DCE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		548902B224C9EF7D00DF6DCE /* SettingDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDefaults.swift; sourceTree = "<group>"; };
+		548902B424C9F05200DF6DCE /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		5499774024C9B40600931E18 /* Distance Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Distance Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5499774324C9B40600931E18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5499774524C9B40600931E18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				5499775924C9B7D700931E18 /* MapView.swift */,
 				548902AC24C9C71300DF6DCE /* DistanceManager.swift */,
 				548902AE24C9CD6500DF6DCE /* SettingsView.swift */,
+				548902B224C9EF7D00DF6DCE /* SettingDefaults.swift */,
+				548902B424C9F05200DF6DCE /* SettingsManager.swift */,
 				5499774124C9B40600931E18 /* Products */,
 				5499774924C9B40800931E18 /* Assets.xcassets */,
 				5499774E24C9B40800931E18 /* LaunchScreen.storyboard */,
@@ -161,7 +167,9 @@
 				5499774624C9B40600931E18 /* SceneDelegate.swift in Sources */,
 				548902AF24C9CD6500DF6DCE /* SettingsView.swift in Sources */,
 				5499774824C9B40600931E18 /* ContentView.swift in Sources */,
+				548902B324C9EF7D00DF6DCE /* SettingDefaults.swift in Sources */,
 				548902AD24C9C71300DF6DCE /* DistanceManager.swift in Sources */,
+				548902B524C9F05200DF6DCE /* SettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

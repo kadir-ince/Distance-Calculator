@@ -13,7 +13,10 @@ struct ContentView: View {
     @State private var centerCoordinate = CLLocationCoordinate2D()
     @State private var locations = [MKPointAnnotation]()
 
+    @ObservedObject var settings = SettingManager()
+
     @State private var showSettings = false
+    @State private var show = false
 
     @ObservedObject var dm = DistanceManager()
 
@@ -62,20 +65,30 @@ struct ContentView: View {
             VStack {
                 Text("Distance Calculator")
                     .font(.title).bold()
-                Circle()
-                    .frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.37)
+                ZStack {
+                    Circle()
+                        .trim(from: show ? CGFloat(dm.distance!) / CGFloat(settings.travelRadius) : 0.9, to: 1)
+                        .stroke(LinearGradient(gradient: Gradient(colors: [.red, .pink]), startPoint: .top, endPoint: .bottom), style: StrokeStyle(lineWidth: 30, lineCap: .round, lineJoin: .round))
+                        .frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.37)
+                        .rotationEffect(.degrees(90))
+                        .rotation3DEffect(.degrees(180), axis: (x: 1, y: 0, z: 0))
+                        .animation(Animation.easeIn(duration: 1))
+                        .onAppear {
+                            self.show.toggle()
+                        }
+
+                    if dm.distance != 0 {
+                        Text("\(Int(dm.distance ?? 0)) km ")
+                            .font(.title)
+                    }
+                }
             }
             HStack {
-                Spacer()
-                Spacer()
-                if dm.distance != 0 {
-                    Text("\(Int(dm.distance ?? 0)) km ")
-                        .font(.title)
-                }
                 Spacer()
 
                 Button(action: {
                     self.showSettings.toggle()
+                    print("nedir   ", CGFloat(self.dm.distance!))
                 }, label: {
                     Image(systemName: "gear")
                         .font(.largeTitle)

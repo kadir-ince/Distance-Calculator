@@ -9,9 +9,13 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State var travelRadius: Double = 300
+    
+    @Environment(\.presentationMode) var presentationMode : Binding<PresentationMode>
+   @ObservedObject var settings = SettingManager()
+    
     var body: some View {
         VStack(alignment: .center) {
+            Spacer()
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
                     .fill(LinearGradient(gradient: Gradient(colors: [.red, .pink]), startPoint: .top, endPoint: .bottom))
@@ -21,14 +25,20 @@ struct SettingsView: View {
             .padding(.bottom, UIScreen.main.bounds.height * 0.05)
 
             Text("How much gas do you have?").font(.title).multilineTextAlignment(.center)
-            Slider(value: $travelRadius, in: 100 ... 500, step: 100)
+            Slider(value: $settings.travelRadius, in: 100 ... 500, step: 100)
                 .padding()
             HStack {
-                ForEach(0 ..< Int(travelRadius / 100), id: \.self) { _ in
+                ForEach(0 ..< Int(settings.travelRadius / 100), id: \.self) { _ in
                     Image(systemName: "car").font(.largeTitle).padding(.top, 20).foregroundColor(.blue)
                 }
             }
-            Text("My radius is \(Int(travelRadius)) km").font(.body).foregroundColor(.gray).bold().padding(.top, 20)
+            Text("My radius is \(Int(settings.travelRadius)) km").font(.body).foregroundColor(.gray).bold().padding(.top, 20)
+            Spacer()
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Text("Done").bold().font(.title).shadow(radius: 10)
+            })
         }
     }
 }
