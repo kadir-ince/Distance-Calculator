@@ -6,7 +6,6 @@
 //  Copyright © 2020 Kadir. All rights reserved.
 //
 
-import Foundation
 import MapKit
 import SwiftUI
 

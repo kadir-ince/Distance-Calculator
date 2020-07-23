@@ -13,6 +13,8 @@ struct ContentView: View {
     @State private var centerCoordinate = CLLocationCoordinate2D()
     @State private var locations = [MKPointAnnotation]()
 
+    @ObservedObject var dm = DistanceManager()
+
     var body: some View {
         VStack {
             ZStack {
@@ -28,12 +30,25 @@ struct ContentView: View {
                 let newLocation = MKPointAnnotation()
                 newLocation.coordinate = self.centerCoordinate
                 self.locations.append(newLocation)
-                print(self.locations)
-                print(newLocation)
-                print(self.locations)
-
+                
+                if self.locations.count == 2 {
+                    let locationA = CLLocation(latitude: self.locations.first!.coordinate.latitude, longitude: self.locations.first!.coordinate.longitude)
+                    
+                    let locationB = CLLocation(latitude: self.locations.last!.coordinate.latitude, longitude: self.locations.last!.coordinate.longitude)
+                    
+                    self.dm.distance([locationA, locationB])
+                    
+                }else if self.locations.count > 2 {
+                    self.dm.distance = 0
+                    self.locations.removeAll()
+                }
+                
             }) {
-                Image(systemName: "plus")
+                if self.locations.count != 2 {
+                    Image(systemName: "plus")
+                }else{
+                    Image(systemName: "trash")
+                }
             }
             .font(.title)
             .padding()
@@ -47,8 +62,15 @@ struct ContentView: View {
                     .font(.title).bold()
                 Circle()
                     .frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.37)
+                
             }
             HStack {
+                Spacer()
+                Spacer()
+                if dm.distance != 0 {
+                    Text("\(Int(dm.distance ?? 0 )) km ")
+                        .font(.title)
+                }
                 Spacer()
                 Button(action: {
                     //
