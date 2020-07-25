@@ -30,7 +30,7 @@ If you want to open it on your Mac, open Terminal and write respectively below c
 
 <b>What do these codes do?</b> <br>
 git clone --> Cloning the project on your Mac from GitHub <br>
-cd Todo --> Change current directory to the project directory <br>
+cd Distance-Calculator --> Change current directory to the project directory <br>
 xed . --> Open the project in Xcode <br>
 
 ## Simple Use Case In Life
