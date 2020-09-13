@@ -8,7 +8,7 @@ This app calculates how many kilometers between two locations. <br>
 
 | Simple Usage Case | Star TimeLine of the Repo |
 | -------- | -------- |
-|   <img height=630 src="https://github.com/kadir-ince/Distance-Calculator/blob/master/distance.gif" alt="What's like?"> | <img width=650 src="https://starchart.cc/kadir-ince/Distance-Calculator.svg" alt="What's like?"> |
+|   <img width=430 src="https://github.com/kadir-ince/Distance-Calculator/blob/master/distance.gif" alt="What's like?"> | <img width=650 src="https://starchart.cc/kadir-ince/Distance-Calculator.svg" alt="What's like?"> |
 
 
 
