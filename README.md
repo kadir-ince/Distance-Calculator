@@ -6,11 +6,12 @@ This app calculates how many kilometers between two locations. <br>
 [![xcode-version](https://img.shields.io/badge/xcode-11-brightgreen)](https://developer.apple.com/xcode/)
 ![GitHub repo size](https://img.shields.io/github/repo-size/kadir-ince/Distance-Calculator)
 
+| Simple Usage Case | Star TimeLine of the Repo |
+| -------- | -------- |
+|   <img height=630 src="https://github.com/kadir-ince/Distance-Calculator/blob/master/distance.gif" alt="What's like?"> | <img width=650 src="https://starchart.cc/kadir-ince/Distance-Calculator.svg" alt="What's like?"> |
 
 
-<p align="center">
-  <img height=630 src="https://github.com/kadir-ince/Distance-Calculator/blob/master/distance.gif" alt="What's like?">
-</p>
+
 
 ### How To Use?
 - Select your car how much has gas. 
