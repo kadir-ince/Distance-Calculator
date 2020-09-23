@@ -7,7 +7,7 @@ This app calculates how many kilometers between two locations. <br>
 ![GitHub repo size](https://img.shields.io/github/repo-size/kadir-ince/Distance-Calculator)
 
 ## Simple Usage Case 
-<img width=430 src="https://github.com/kadir-ince/Distance-Calculator/blob/master/distance.gif" alt="What's like?"> 
+<img width=330 src="https://github.com/kadir-ince/Distance-Calculator/blob/master/distance.gif" alt="What's like?"> 
 
 
 
